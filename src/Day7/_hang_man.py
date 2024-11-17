@@ -1,7 +1,9 @@
 import random
 import _hang_man_art as  art
-print(art.logo)
+
 def main():
+    print(art.logo)
+    # variables stuff,...
     lives = 6
     correct_letter = []
     i =0
@@ -16,9 +18,9 @@ def main():
     for i  in range (1,n+1):
         word_guess+="_"
     print("Word to guess:"+word_guess)
-    print('\n')
     user_input = input("Press any key to continue")
     player_won = False
+    #game logic:
     while(not game_end):
         display = ""
         user_input = input("Guess a letter:")
@@ -48,6 +50,8 @@ def main():
         if "_" not in display:
             game_end=True
             print("Congratulations! You won")
+
+#Running :
 if __name__ == "__main__":
     main()
 
