@@ -1,0 +1,7 @@
+Dictionaries:
+
+KEY :VALUE
+
+EXAMPLE:
+{"Bug":"An error in a program that prevents something",
+ "Function": a piece of code that run when we call}
