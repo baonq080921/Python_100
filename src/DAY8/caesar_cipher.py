@@ -5,19 +5,16 @@ def main():
     def encrypt(original_text, shift) -> str:
         encrypted_text = ""
         for char in original_text:
-            i = alphabet_list.index(char) + shift
-            if i >= len(alphabet_list):
-                i = abs(i - len(alphabet_list))
-
+            n = shift % len(alphabet_list)
+            i = (alphabet_list.index(char) + n) % len(alphabet_list)
             encrypted_text += alphabet_list[i]
         return encrypted_text
 
     def decrypt(encrypted_text, shift) -> str:
         decrypted_text = ""
         for char in encrypted_text:
-            i = alphabet_list.index(char) - shift
-            if i < 0:
-                i = abs(i + len(alphabet_list))
+            n = shift % len(alphabet_list)
+            i = (alphabet_list.index(char) - n)
             decrypted_text += alphabet_list[i]
 
         return decrypted_text
@@ -29,7 +26,7 @@ def main():
 
     type = input("Type encrypt or decrypt:\n ").lower()
     if type == "encode":
-        original_text = input("Type the original:")
+        original_text = input("Type the original:").lower()
         shift = int(input("Type number of shift: "))
         encrypt_text = encrypt(original_text, shift)
         print(encrypt_text)
