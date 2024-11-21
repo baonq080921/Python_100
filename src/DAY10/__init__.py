@@ -15,4 +15,5 @@ def is_leap_year(year):
         return False
 
 print(is_leap_year(2024))
+print(is_leap_year(2000))
 
