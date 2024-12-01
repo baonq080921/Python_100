@@ -5,7 +5,6 @@ os.environ['TERM'] = 'xterm'
 # list or card with Aces is 11 and J,Q,K is all 10
 cards = [11,1,2,3,4,5,6,7,8,9,10,10,10,10]
 
-counter =0
 is_over = True
 is_going = True
 while(is_over):
@@ -15,7 +14,6 @@ while(is_over):
     is_going = True
     # player, computer, max score
     current_score = 0
-    new_score = 0
     max_score = 21
     final_score = 0
     start_game = input('Do you want to play a game of cards? (y/n): ').lower()
